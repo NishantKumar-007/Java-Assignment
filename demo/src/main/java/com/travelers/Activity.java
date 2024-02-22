@@ -16,24 +16,52 @@ public class Activity {
         this.destination = destination;
     }
     
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return name;
     }
+    
+    /** 
+     * @return String
+     */
     public String getDescription() {
         return description;
     }
+    
+    /** 
+     * @return double
+     */
     public double getCost() {
         return cost;
     }
+    
+    /** 
+     * @return int
+     */
     public int getCapacity() {
         return capacity;
     }
+    
+    /** 
+     * @param capacity
+     */
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
+    
+    /** 
+     * @return Destination
+     */
     public Destination getDestination() {
         return destination;
     }    
+    
+    /** 
+     * @param destination
+     */
     public void setDestination(Destination destination) {
         this.destination = destination;
     }

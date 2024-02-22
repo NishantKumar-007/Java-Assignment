@@ -11,15 +11,27 @@ public class Destination {
         this.name = name;
         this.activities = new ArrayList<>();
     }
+    
+    /** 
+     * @return String
+     */
     public String getName() {
         return name;
     }
     
+    
+    /** 
+     * @return List<Activity>
+     */
     public List<Activity> getActivities() {
         return activities;
     }
     
 
+    
+    /** 
+     * @param activity
+     */
     public void addActivity(Activity activity) {
         if (activity.getDestination() != null && activity.getDestination() != this) {
             System.out.println("Error: Activity " + activity.getName() + " is already associated with another destination.");
