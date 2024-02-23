@@ -70,7 +70,7 @@ config=StructureConfiguration;
     "showPackageLevels": 2,
     "showDetailedClassStructure": true
   },
-  "rootClass": "com.travelers.GoldPassenger",
+  "rootClass": "com.travelers.Main",
   "extensionCallbackMethod": "" // qualified.class.name#methodName - signature: public static String method(String)
 }
 diagram meta data end '/
@@ -124,6 +124,18 @@ Destination686236639[
 GoldPassenger686236639[
 	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
 <TR><TD ALIGN="LEFT" >(C)GoldPassenger</TD></TR>
+</TABLE>>
+	style=filled
+	margin=0
+	shape=plaintext
+	fillcolor="#FFFFFF"
+];
+
+Main686236639[
+	label=<<TABLE BORDER="1" CELLBORDER="0" CELLPADDING="4" CELLSPACING="0">
+<TR><TD ALIGN="LEFT" >(C)Main</TD></TR>
+<HR/>
+<TR><TD ALIGN="LEFT" >+ main(args: String[])</TD></TR>
 </TABLE>>
 	style=filled
 	margin=0
@@ -202,6 +214,8 @@ Passenger686236639 -> Activity686236639[label="signedUpActivities
 Passenger686236639 -> GoldPassenger686236639[arrowhead=none, arrowtail=empty, dir=both];
 Passenger686236639 -> PremiumPassenger686236639[arrowhead=none, arrowtail=empty, dir=both];
 Passenger686236639 -> StandardPassenger686236639[arrowhead=none, arrowtail=empty, dir=both];
+TravelPackage686236639 -> Destination686236639[label="destinations
+[0..*]"];
 TravelPackage686236639 -> Passenger686236639[label="passengers
 [0..*]"];
     
