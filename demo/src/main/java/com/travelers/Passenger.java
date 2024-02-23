@@ -34,12 +34,14 @@ public class Passenger {
 
     public void signUpForActivity(Activity activity) {
 
+        // checking if capacity is full
         if (activity.getCapacity() == 0) {
             System.out.println("Sorry, activity " + activity.getName() + " at destination " +
                     activity.getDestination().getName() + " is already full.");
             return;
         }
 
+        // calculation based on passenger tier
         if (this instanceof GoldPassenger) {
             double discountedCost = 0.9 * activity.getCost();
             if (balance >= discountedCost) {
