@@ -2,9 +2,9 @@ package com.travelers;
 
 
 public class Activity {
-    private String name;
-    private String description;
-    private double cost;
+    private final String name;
+    private final String description;
+    private final double cost;
     private int capacity;
     private Destination destination;
 
@@ -15,51 +15,51 @@ public class Activity {
         this.capacity = capacity;
         this.destination = destination;
     }
-    
-    
-    /** 
+
+
+    /**
      * @return String
      */
     public String getName() {
         return name;
     }
-    
-    /** 
+
+    /**
      * @return String
      */
     public String getDescription() {
         return description;
     }
-    
-    /** 
+
+    /**
      * @return double
      */
     public double getCost() {
         return cost;
     }
-    
-    /** 
+
+    /**
      * @return int
      */
     public int getCapacity() {
         return capacity;
     }
-    
-    /** 
+
+    /**
      * @param capacity
      */
     public void setCapacity(int capacity) {
         this.capacity = capacity;
     }
-    
-    /** 
+
+    /**
      * @return Destination
      */
     public Destination getDestination() {
         return destination;
-    }    
-    
-    /** 
+    }
+
+    /**
      * @param destination
      */
     public void setDestination(Destination destination) {

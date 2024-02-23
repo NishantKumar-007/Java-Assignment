@@ -4,10 +4,10 @@ import java.util.ArrayList;
 import java.util.List;
 
 class TravelPackage {
-    private String name;
-    private int passengerCapacity;
-    private List<Passenger> passengers;
-    private List<Destination> destinations;
+    private final String name;
+    private final int passengerCapacity;
+    private final List<Passenger> passengers;
+    private final List<Destination> destinations;
 
     public TravelPackage(String name, int passengerCapacity) {
         this.name = name;
@@ -70,8 +70,7 @@ class TravelPackage {
         System.out.println("  Passenger Number: " + passenger.getPassengerNumber());
         if (passenger instanceof StandardPassenger || passenger instanceof GoldPassenger) {
             System.out.println("  Balance: $" + passenger.getBalance());
-        }
-        else{
+        } else {
             System.out.println("  Balance: $" + passenger.getBalance());
         }
         System.out.println("  Activities Signed Up For:");
@@ -105,5 +104,5 @@ class TravelPackage {
         }
         return count;
     }
-    
+
 }

@@ -7,7 +7,7 @@ import org.mockito.MockitoAnnotations;
 
 import java.io.ByteArrayOutputStream;
 import java.io.PrintStream;
-import java.util.Arrays;
+import java.util.List;
 
 import static org.junit.Assert.assertEquals;
 import static org.mockito.Mockito.*;
@@ -52,7 +52,7 @@ public class TravelPackageTest {
         when(mockActivity.getDescription()).thenReturn("Guided tour of Eiffel Tower");
         when(mockActivity.getCost()).thenReturn(330.0);
         when(mockActivity.getCapacity()).thenReturn(15);
-        when(mockDestination.getActivities()).thenReturn(Arrays.asList(mockActivity));
+        when(mockDestination.getActivities()).thenReturn(List.of(mockActivity));
         travelPackage.addDestination(mockDestination);
 
         // Capture system output
@@ -103,7 +103,7 @@ assertEquals(expectedOutput, outContent.toString());
     public void testPrintPassengerDetails() {
         when(mockPassenger.getName()).thenReturn("John Doe");
         when(mockPassenger.getPassengerNumber()).thenReturn(123);
-        when(mockPassenger.getSignedUpActivities()).thenReturn(Arrays.asList(mockActivity));
+        when(mockPassenger.getSignedUpActivities()).thenReturn(List.of(mockActivity));
         when(mockActivity.getName()).thenReturn("Eiffel Tower Tour");
         when(mockActivity.getDestination()).thenReturn(mockDestination);
         when(mockActivity.getCost()).thenReturn(330.0);
@@ -142,7 +142,7 @@ assertEquals(expectedOutput, outContent.toString());
     when(mockActivity.getCapacity()).thenReturn(15);
     when(mockActivity.getDestination()).thenReturn(mockDestination);
 
-    when(mockDestination.getActivities()).thenReturn(Arrays.asList(mockActivity));
+    when(mockDestination.getActivities()).thenReturn(List.of(mockActivity));
     travelPackage.addDestination(mockDestination);
 
     // Capture system output
@@ -163,7 +163,7 @@ assertEquals(expectedOutput, outContent.toString());
 
 @Test
 public void testCountSignedUpPassengers() {
-when(mockPassenger.getSignedUpActivities()).thenReturn(Arrays.asList(mockActivity));
+when(mockPassenger.getSignedUpActivities()).thenReturn(List.of(mockActivity));
 travelPackage.addPassenger(mockPassenger);
 
 int count = travelPackage.countSignedUpPassengers(mockActivity);

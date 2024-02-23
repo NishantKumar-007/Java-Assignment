@@ -1,4 +1,4 @@
-@startuml
+@startuml main
 
 /' diagram meta data start
 config=StructureConfiguration;
